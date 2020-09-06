@@ -16,18 +16,18 @@ class App extends Component{
           <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
          <Link to={'/'} className="navbar-brand">React Vehicle CRUD by Isuru</Link>
-         <div className="collapse navbar-collaps" id="navbarSupportedContent">
+         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item">
               <Link to={'/'} className="nav-link">Home</Link>
             </li>
 
             <li className="nav-item">
-              <Link to={'/'} className="nav-link">Edit Vehicle</Link>
+              <Link to={'/'} className="nav-link">Create Vehicle</Link>
             </li>
 
             <li className="nav-item">
-              <Link to={'/edit-vehicle/:id'} className="nav-link">Create Vehicle</Link>
+              <Link to={'/edit-vehicle/:id'} className="nav-link">Edit Vehicle</Link>
             </li>
 
             <li className="nav-item">
@@ -43,8 +43,8 @@ class App extends Component{
 
         <Switch>
           <Route exact path="/" component={CreateVehicle} />
-          <Route exact path="/create-vehicle" component={EditVehicle} />
-          <Route exact path="/update-vehicle/:id" component={VehicleList} />
+          <Route exact path="/create-vehicle" component={CreateVehicle} />
+          <Route exact path="/edit-vehicle/:id" component={EditVehicle} />
           <Route exact path="/vehicle-list" component={VehicleList} />
 
           
