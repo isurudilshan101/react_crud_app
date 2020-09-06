@@ -12,11 +12,15 @@ class App extends Component{
   render(){
     return(
       
-        <div className="container">
-          <p>hhhhh</p>
+       <Router>
+          <div className="container">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+         <Link to={'/'} className="navbar-brand">React Vehicle CRUD by Isuru</Link>
+        </nav>
         </div>
+       </Router>
      
-    )
+    );
   }
 }
 
