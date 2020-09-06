@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-class CreateVehicle extends Component{
+export default class CreateVehicle extends Component{
     render(){
         return(
             <div>
@@ -12,4 +12,4 @@ class CreateVehicle extends Component{
     };
 }
 
-export default CreateVehicle;
+
