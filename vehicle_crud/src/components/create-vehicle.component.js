@@ -41,7 +41,7 @@ export default class CreateVehicle extends Component{
 
         console.log(`Vehicle Color: ${this.state.color}`);
 
-        console.log(`Vehicle Number: ${this.state. number}`);
+        console.log(`Vehicle Number: ${this.state.number}`);
 
         this.setState({name:'', color: '' , number:''});
 
