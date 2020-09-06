@@ -45,3 +45,19 @@ router.route('/edit-vehicle/:id').get((req,res)=>{
     })
 })
 
+//u[date data
+
+router.route('/update-vehicle/:id').put((req,res,next)=>{
+    vehicleSchema.findByIdAndUpdate(req.params.id,{
+        $set:req.body
+    },(error,data=>{
+        if(error){
+            return next(error)
+        }else{
+            res.json(data)
+            console.log('Vehicle updated successfully');
+        }
+    }))
+})
+
+
