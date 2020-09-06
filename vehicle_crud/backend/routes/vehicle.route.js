@@ -61,3 +61,18 @@ router.route('/update-vehicle/:id').put((req,res,next)=>{
 })
 
 
+//delete vehicle data
+
+router.rout('/delete-vehicle/:id').delete((req,res,next)=>{
+    vehicleSchema.findByIdAndRemove(req.params.id,(error,data)=>{
+        if(error){
+            return next(error)
+        }else{
+            res.status(200).json({
+                msg:data
+            })
+        }
+    })
+})
+
+module.exports=router;
