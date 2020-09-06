@@ -19,6 +19,19 @@ export default class CreateVehicle extends Component{
         }
     }
 
+
+    onChangeVehicleName(e){
+        this.setState({name: e.target.value});
+    }
+
+    onChangeVehicleColor(e){
+        this.setState({color: e.target.value});
+    }
+
+    onChangeVehicleNumber(e){
+        this.setState({number: e.target.value});
+    }
+
     render(){
         return(
             <div class="form-wrapper">
