@@ -58,12 +58,12 @@ export default class CreateVehicle extends Component{
 
                  <Form.Group controlId="Vehicle Color">
                   <Form.Label>Color of the Vehicle: </Form.Label>   
-                  <Form.Control type="text" value={this.state.color} onChange={this. onChangeVehicleColor}/>  
+                  <Form.Control type="text" value={this.state.color} onChange={this.onChangeVehicleColor}/>  
                  </Form.Group>
 
                  <Form.Group controlId="Vehicle Number">
                   <Form.Label>Number of the Vehicle: </Form.Label>   
-                  <Form.Control type="text" value={this.state.number} onChange={this. onChangeVehicleNumber}/>  
+                  <Form.Control type="text" value={this.state.number} onChange={this.onChangeVehicleNumber}/>  
                  </Form.Group>
 
                 <Button variant="danger" size="lg" block="block" type="submit">Add Vehicle</Button>
