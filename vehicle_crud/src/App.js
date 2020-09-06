@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
 import {BrowserRouter as Router,Switch,Route,Link} from 'react-router-dom';
-import CreateVehicle from './components/create-vehicle.cpmponent';
+import CreateVehicle from './components/create-vehicle.component';
 import EditVehicle from './components/etid-vehicle.component';
 import VehicleList from './components/vehicle-list.component';
 
@@ -18,36 +18,37 @@ class App extends Component{
          <Link to={'/'} className="navbar-brand">React Vehicle CRUD by Isuru</Link>
          <div className="collapse navbar-collaps" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-link">
+            <li className="nav-item">
               <Link to={'/'} className="nav-link">Home</Link>
             </li>
 
-            <li className="nav-link">
+            <li className="nav-item">
               <Link to={'/'} className="nav-link">Edit Vehicle</Link>
             </li>
 
-            <li className="nav-link">
+            <li className="nav-item">
               <Link to={'/edit-vehicle/:id'} className="nav-link">Create Vehicle</Link>
             </li>
 
-            <li className="nav-link">
+            <li className="nav-item">
               <Link to={'/vehicle-list'} className="nav-link">Vehicle List</Link>
             </li>
             
           </ul>
          </div>
-         <br/>
-         <h2>Welcome!</h2>
+         
         </nav>
+        <br/>
+         <h2>Welcome!</h2>
 
-        <switch>
+        <Switch>
           <Route exact path="/" component={CreateVehicle} />
           <Route exact path="/create-vehicle" component={EditVehicle} />
           <Route exact path="/update-vehicle/:id" component={VehicleList} />
           <Route exact path="/vehicle-list" component={VehicleList} />
 
           
-        </switch>
+        </Switch>
 
         </div>
        </Router>

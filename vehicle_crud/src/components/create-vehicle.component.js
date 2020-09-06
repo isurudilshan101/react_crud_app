@@ -5,7 +5,7 @@ export default class CreateVehicle extends Component{
         return(
             <div>
                 <p>
-                    Vehicle create compponent
+                    Vehicle create component
                 </p>
             </div>
         );
