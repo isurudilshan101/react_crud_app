@@ -31,3 +31,17 @@ router.route('/').get((req,res)=>{
         }
     })
 })
+
+
+//get a prarticular detail
+
+router.route('/edit-vehicle/:id').get((req,res)=>{
+    vehicleSchema.findById(req.params.id,(error,data)=>{
+        if(error){
+            return next(error)
+        }else{
+            res.json(data)
+        }
+    })
+})
+
