@@ -20,4 +20,14 @@ router.route('/create-vehicle').post((req,res,next)=>{
 });
 
 
-//reading vehicle
+//reading vehicles
+
+router.route('/').get((req,res)=>{
+    vehicleSchema.find((error,data)=>{
+        if(error){
+            return next(error)
+        }else{
+            res.json(data)
+        }
+    })
+})
