@@ -40,6 +40,15 @@ class App extends Component{
          <h2>Welcome!</h2>
         </nav>
 
+        <switch>
+          <Route exact path="/" component={CreateVehicle} />
+          <Route exact path="/create-vehicle" component={EditVehicle} />
+          <Route exact path="/update-vehicle/:id" component={VehicleList} />
+          <Route exact path="/vehicle-list" component={VehicleList} />
+
+          
+        </switch>
+
         </div>
        </Router>
      
