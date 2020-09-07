@@ -45,7 +45,7 @@ router.route('/edit-vehicle/:id').get((req,res)=>{
     })
 })
 
-//u[date data
+//update data
 
 router.route('/update-vehicle/:id').put((req,res,next)=>{
     vehicleSchema.findByIdAndUpdate(req.params.id,{
