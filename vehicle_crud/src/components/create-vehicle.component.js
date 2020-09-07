@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import axios from 'axios';
+
 
 export default class CreateVehicle extends Component{
 
@@ -35,13 +37,25 @@ export default class CreateVehicle extends Component{
     onSubmit(e){
         e.preventDefault();
 
-        console.log('Vehicle Added');
+        // console.log('Vehicle Added');
 
-        console.log(`Vehicle Name: ${this.state.name}`);
+        // console.log(`Vehicle Name: ${this.state.name}`);
 
-        console.log(`Vehicle Color: ${this.state.color}`);
+        // console.log(`Vehicle Color: ${this.state.color}`);
 
-        console.log(`Vehicle Number: ${this.state.number}`);
+        // console.log(`Vehicle Number: ${this.state.number}`);
+
+        const vehicleObject={
+            name:this.state.name,
+            color:this.state.color,
+            number:this.state.number
+             
+        };
+        axios
+        .post('http://localhost:4000/vehicles/create-vehicle',vehicleObject)
+        .then(res=>console.log(res.data));
+       
+
 
         this.setState({name:'', color: '' , number:''});
 
