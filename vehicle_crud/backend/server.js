@@ -24,5 +24,14 @@ error=>{
 const app=express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
-
+extended:true
 }));
+app.use(cors());
+app.use('/vehicles',cehicleRoute)
+
+//port
+
+const port=process.env.PORT||400;
+const server-app.listen(port,()=>{
+    console.log('connected to the port'+ port)
+})
