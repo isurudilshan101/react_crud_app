@@ -1,4 +1,4 @@
-const mogoose=require('mongoose')
+const mongoose=require('mongoose')
 const Schema=mongoose.Schema
 
 let vehicleSchema=new Schema({
@@ -9,10 +9,10 @@ let vehicleSchema=new Schema({
         type:String
     },
     number:{
-        type:number
+        type:Number
     }
 }, {
     collection:'vehicles'
 })
 
-module.export=mongoose.model('Vehicle',vehicleSchema)
+module.exports=mongoose.model('Vehicle',vehicleSchema)

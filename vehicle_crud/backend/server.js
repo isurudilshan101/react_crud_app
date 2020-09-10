@@ -8,7 +8,7 @@ let dbConfig=require('./database/db');
 
 const vehicleRoute=require('../backend/routes/vehicle.route');
 
-//mongodb connecc=tion
+//mongodb connection
 
 mongoose.Promise=global.Promise;
 mongoose.connect(dbConfig.db,{
@@ -27,11 +27,11 @@ app.use(bodyParser.urlencoded({
 extended:true
 }));
 app.use(cors());
-app.use('/vehicles',cehicleRoute)
+app.use('/vehicles',vehicleRoute)
 
 //port
 
-const port=process.env.PORT||400;
+const port=process.env.PORT||4000;
 const server=app.listen(port,()=>{
     console.log('connected to the port'+ port)
 })

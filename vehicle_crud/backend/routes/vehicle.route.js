@@ -1,5 +1,5 @@
 let mongoose=require('mongoose');
-let expresss=require('express');
+let express=require('express');
 let router=express.Router();
 
 //importing vehicle model
@@ -63,7 +63,7 @@ router.route('/update-vehicle/:id').put((req,res,next)=>{
 
 //delete vehicle data
 
-router.rout('/delete-vehicle/:id').delete((req,res,next)=>{
+router.route('/delete-vehicle/:id').delete((req,res,next)=>{
     vehicleSchema.findByIdAndRemove(req.params.id,(error,data)=>{
         if(error){
             return next(error)
