@@ -10,8 +10,9 @@ export default class VehicleList extends Component{
         this.state={
             vehicles: []
         };
+    }
 
-        this.componentDidMount(){
+        componentDidMount(){
             axios.get('http://localhost:4000/vehicles')
             .then(res=>{
                 this.setState({
@@ -24,19 +25,32 @@ export default class VehicleList extends Component{
         }
         DataTable(){
             return this.state.vehicles.map((res,i)=>{
-                return <VehicleTableRow obj={res} key={}i/>
+                return <VehicleTableRow obj={res} key={i}/>
             });
         }
-    }
+
+    
 
 
     render(){
-        return(
-            <div>
-                <p>
-                    Vehicle list compponent
-                </p>
-            </div>
-        );
-    };
+        return (
+        <div className="table-wrapper">
+            <Table striped border hover>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Color</th>
+                        <th>Number</th>
+
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {this.DataTable()}
+                </tbody>
+            </Table>
+        </div>);
+      
+    }
 }
