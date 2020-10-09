@@ -7,14 +7,21 @@ import axios from 'axios';
 export default class VehicleTableRow extends Component{
 
     render(){
-        return(){
+        return(
             <tr>
-                <td>{this.props.name}</td>
-                <td>{this.props.color}</td>
-                <td>{this.props.number}</td>
+                <td>{this.props.obj.name}</td>
+                <td>{this.props.obj.color}</td>
+                <td>{this.props.obj.number}</td>
+                <td>
+                <Link className="edit-link" to={"/edit-vehicle" + this.props.obj._id}>Edit
+                </Link >
+                <Button size="sm" variant="danger">Delete</Button>
+                </td>
+                 
 
 
             </tr>
-        }
+        );
+        
     }
 }

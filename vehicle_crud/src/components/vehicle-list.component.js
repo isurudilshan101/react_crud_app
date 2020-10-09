@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
-import Table from 'react-boostrap/Table';
+import Table from 'react-bootstrap/Table';
 import VehicleTableRow from './VehicleTableRow';
 
 export default class VehicleList extends Component{
