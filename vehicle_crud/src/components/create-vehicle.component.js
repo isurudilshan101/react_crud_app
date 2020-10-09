@@ -64,7 +64,7 @@ export default class CreateVehicle extends Component{
     render(){
         return(
             <div class="form-wrapper">
-             <Form>
+             <Form onSubmit={this.onSubmit}>
                  <Form.Group controlId="VehicleName">
                   <Form.Label>Name of the Vehicle: </Form.Label>   
                   <Form.Control type="text" value={this.state.name} onChange={this.onChangeVehicleName}/>  

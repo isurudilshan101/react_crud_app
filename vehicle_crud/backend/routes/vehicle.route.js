@@ -9,7 +9,7 @@ let vehicleScchema=require('../Models/Vehicle');
 //creating the vehicle 
 
 router.route('/create-vehicle').post((req,res,next)=>{
-    vehicleScchema.create(req,body,(error,data)=>{
+    vehicleScchema.create(req.body,(error,data)=>{
         if(error){
             return next(error)
         }else{
